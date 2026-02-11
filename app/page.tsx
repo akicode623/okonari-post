@@ -10,6 +10,7 @@ const highlights = [
   "困りごとをすぐに記録",
   "カテゴリで見返しやすい",
   "改善アイデアを資産化",
+  "会員チャットで交流できる",
 ];
 
 export default function HomePage() {
@@ -37,7 +38,7 @@ export default function HomePage() {
               あとから振り返ると、行動改善のヒントが見えてきます。
             </p>
 
-            <div className="grid gap-3 sm:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {highlights.map((item) => (
                 <div
                   key={item}
@@ -60,6 +61,12 @@ export default function HomePage() {
                 className="inline-flex items-center justify-center rounded-2xl border border-[#1b1c18]/20 px-8 py-3 text-base font-semibold text-[#1b1c18] transition hover:-translate-y-0.5 hover:bg-white"
               >
                 投稿一覧を見る
+              </Link>
+              <Link
+                href="/members/chat"
+                className="inline-flex items-center justify-center rounded-2xl border border-[#b05f2b]/25 bg-[#f8e9d8] px-8 py-3 text-base font-semibold text-[#8f4d1f] transition hover:-translate-y-0.5 hover:bg-[#f6e2cc]"
+              >
+                会員チャットへ
               </Link>
             </div>
           </div>

@@ -18,3 +18,12 @@ model Post {
   actions   String[] // ✅ 複数選択
   solution  String
 }
+
+model ChatMessage {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  displayName String
+  message     String
+}

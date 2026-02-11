@@ -65,23 +65,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <style jsx>{`
-        .animate-fade-up {
-          animation: fade-up 0.8s ease-out both;
-        }
-
-        @keyframes fade-up {
-          from {
-            opacity: 0;
-            transform: translateY(16px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </main>
   );
 }

@@ -61,6 +61,12 @@ export default async function AdminPostsPage({
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-xl font-bold">管理：投稿一覧</h1>
         <div className="flex gap-2">
+          <Link
+            className="px-4 py-2 rounded bg-amber-600 text-white"
+            href="/admin/news"
+          >
+            お知らせ管理
+          </Link>
           <a
             className="px-4 py-2 rounded bg-green-600 text-white"
             href="/api/posts/csv"

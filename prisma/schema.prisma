@@ -27,3 +27,22 @@ model ChatMessage {
   displayName String
   message     String
 }
+
+enum NewsCategory {
+  NOTICE
+  EVENT
+}
+
+model NewsPost {
+  id        String       @id @default(cuid())
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  category  NewsCategory @default(NOTICE)
+  title     String
+  content   String
+  eventDate DateTime?
+
+  @@index([createdAt])
+  @@index([category])
+  @@index([eventDate])
+}
